@@ -73,12 +73,22 @@ border-radius:50%;
 border:none;
 font-size:48px;
 cursor:pointer;
-background:white;
 box-shadow:0 18px 45px rgba(0,0,0,0.15);
 transition:all .25s ease;
 display:flex;
 align-items:center;
 justify-content:center;
+color:white;
+}
+
+/* Korean Menu Buttons */
+.koreanBtn{
+background:#c62828;
+}
+
+/* American Menu Buttons */
+.americanBtn{
+background:#1e3a8a;
 }
 
 .feedbackBtn:hover{
@@ -87,14 +97,6 @@ transform:scale(1.1);
 
 .feedbackBtn:active{
 transform:scale(.95);
-}
-
-.love{
-color:#e53935;
-}
-
-.dislike{
-color:#555;
 }
 
 /* Popup */
@@ -138,8 +140,8 @@ animation:popup .45s forwards;
 <div class="menuTitle korean">Korean Menu</div>
 
 <div class="buttonRow">
-<button class="feedbackBtn love" data-menu="Korean Menu" data-response="Loved it">❤️</button>
-<button class="feedbackBtn dislike" data-menu="Korean Menu" data-response="Needs Improvement">👎</button>
+<button class="feedbackBtn koreanBtn" data-menu="Korean Menu" data-response="Loved it">👍</button>
+<button class="feedbackBtn koreanBtn" data-menu="Korean Menu" data-response="Needs Improvement">👎</button>
 </div>
 </div>
 
@@ -148,8 +150,8 @@ animation:popup .45s forwards;
 <div class="menuTitle american">American Menu</div>
 
 <div class="buttonRow">
-<button class="feedbackBtn love" data-menu="American Menu" data-response="Loved it">❤️</button>
-<button class="feedbackBtn dislike" data-menu="American Menu" data-response="Needs Improvement">👎</button>
+<button class="feedbackBtn americanBtn" data-menu="American Menu" data-response="Loved it">👍</button>
+<button class="feedbackBtn americanBtn" data-menu="American Menu" data-response="Needs Improvement">👎</button>
 </div>
 </div>
 
