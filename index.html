@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
 
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 body{
 margin:0;
@@ -17,18 +18,19 @@ display:flex;
 align-items:center;
 justify-content:center;
 min-height:100vh;
-padding:20px;
+padding:16px;
+-webkit-font-smoothing:antialiased;
 }
 
 /* MAIN CARD */
 
 .container{
 background:white;
-border-radius:18px;
-padding:28px;
-max-width:420px;
+border-radius:20px;
+padding:26px;
+max-width:460px;
 width:100%;
-box-shadow:0 15px 40px rgba(0,0,0,0.12);
+box-shadow:0 18px 45px rgba(0,0,0,0.12);
 text-align:center;
 }
 
@@ -37,16 +39,30 @@ text-align:center;
 h1{
 font-size:20px;
 font-weight:700;
-line-height:1.4;
-margin-bottom:8px;
-color:#222;
+line-height:1.35;
+margin-bottom:6px;
+color:#1f2937;
+}
+
+/* MEAL LINE */
+
+.meal-line{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:nowrap;
+font-size:14px;
+font-weight:600;
+color:#2563eb;
+margin-bottom:16px;
+white-space:nowrap;
 }
 
 .subtitle{
 font-size:14px;
 font-style:italic;
 color:#6b7280;
-margin-bottom:24px;
+margin-bottom:22px;
 }
 
 /* FORM */
@@ -57,18 +73,20 @@ font-weight:600;
 font-size:14px;
 margin-bottom:6px;
 text-align:left;
+color:#374151;
 }
 
 select, textarea{
 width:100%;
 padding:14px;
-font-size:15px;
-border-radius:10px;
+font-size:16px;
+border-radius:12px;
 border:1px solid #d1d5db;
 margin-bottom:18px;
 font-family:'Montserrat',sans-serif;
 box-sizing:border-box;
 background:#fafafa;
+-webkit-appearance:none;
 }
 
 select:focus, textarea:focus{
@@ -88,7 +106,7 @@ button{
 width:100%;
 padding:16px;
 border:none;
-border-radius:12px;
+border-radius:14px;
 background:linear-gradient(135deg,#2563eb,#1d4ed8);
 color:white;
 font-size:16px;
@@ -107,10 +125,10 @@ transform:scale(.97);
 position:fixed;
 top:50%;
 left:50%;
-transform:translate(-50%,-50%) scale(.8);
+transform:translate(-50%,-50%) scale(.85);
 background:white;
 padding:26px 34px;
-border-radius:14px;
+border-radius:16px;
 box-shadow:0 20px 50px rgba(0,0,0,0.25);
 font-size:18px;
 font-weight:600;
@@ -124,7 +142,7 @@ animation:popup .4s forwards;
 }
 
 @keyframes popup{
-0%{transform:translate(-50%,-50%) scale(.8);opacity:0}
+0%{transform:translate(-50%,-50%) scale(.85);opacity:0}
 60%{transform:translate(-50%,-50%) scale(1.05);opacity:1}
 100%{transform:translate(-50%,-50%) scale(1);opacity:1}
 }
@@ -149,6 +167,30 @@ opacity:0;
 }
 }
 
+/* MOBILE IMPROVEMENTS */
+
+@media (max-width:420px){
+
+.container{
+padding:22px;
+}
+
+h1{
+font-size:18px;
+}
+
+.meal-line{
+font-size:13px;
+gap:10px;
+}
+
+button{
+font-size:15px;
+padding:15px;
+}
+
+}
+
 </style>
 </head>
 
@@ -158,8 +200,15 @@ opacity:0;
 
 <h1>
 How satisfied were you with the company meal programs today
-(Breakfast, Korean/American Lunch, Dinner)?
 </h1>
+
+<div class="meal-line">
+<span>Breakfast</span>
+<span>•</span>
+<span>Korean/American Lunch</span>
+<span>•</span>
+<span>Dinner</span>
+</div>
 
 <div class="subtitle">
 Please specify the meal type
@@ -260,3 +309,4 @@ document.getElementById("mealType").value="";
 
 </body>
 </html>
+```
